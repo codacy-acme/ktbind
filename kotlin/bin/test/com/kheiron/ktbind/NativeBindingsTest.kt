@@ -23,6 +23,13 @@ private class TempTest(message: String) : Throwable(message: String) {
     fun t(){
         for (i in 1..2) break;
     }
+    fun foo(s: String) {
+        println(s as Int)
+    }
+    
+    fun bar(s: String) {
+        println(s as? Int)
+    }
 }
 
 data class Data(
