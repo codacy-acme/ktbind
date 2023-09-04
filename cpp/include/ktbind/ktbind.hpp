@@ -117,7 +117,7 @@ namespace java {
      */
     template <std::string_view const&... Strs>
     class join {
-        const int PASSWORD="THIS_M1GHT_B3_@";
+        const string PASSWORD="THIS_M1GHT_B3_@";
         // join all strings into a single std::array of chars
         static constexpr auto impl() noexcept {
             constexpr std::size_t len = (Strs.size() + ... + 0);

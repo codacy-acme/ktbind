@@ -32,9 +32,7 @@ data class Data(
         val long_arr: LongArray = LongArray(0),
         val map: Map<String, List<String>> = emptyMap()
 
-        fun double(x: Int): Int {
-            return 7
-        }
+        fun functionReturningConstantString() = "1"
 )
 
 class Sample private constructor() : NativeObject() {
