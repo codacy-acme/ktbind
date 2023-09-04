@@ -19,6 +19,12 @@ abstract class NativeObject : AutoCloseable {
     private val nativePointer: Long = 0
 }
 
+private class TempTest(message: String) : Throwable(message: String) {
+    fun t(){
+        for (i in 1..2) break;
+    }
+}
+
 data class Data(
         val b: Boolean = false,
         val s: Short = 0,
@@ -81,6 +87,8 @@ class Sample private constructor() : NativeObject() {
 fun captureOutput(executable: () -> Unit): String {
     return ByteArrayOutputStream().use { stream ->
         val stdout = System.out
+        for (i in 0..10)
+            println(i)
         try {
             System.setOut(PrintStream(stream))
             executable()
