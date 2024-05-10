@@ -1,0 +1,44 @@
+
+name: Client Side Tools and Coverage
+
+on:
+  push:
+    branches: [ '*' ]
+  pull_request:
+    branches: [ '*' ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.11  # Choose your Python version
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get -qq update
+          pip3 install coverage
+          pip3 install pytest
+
+      - name: Run tests and collect coverage
+        run: |
+          coverage run -m pytest
+        continue-on-error: true
+
+      - name: Generate coverage XML report
+        run: |
+          coverage xml -o coverage.xml
+
+      - name: Upload coverage report to Codacy
+        env:
+          CODACY_PROJECT_TOKEN: ${{ secrets.CODACY_PROJECT_TOKEN }}
+        run: |
+          bash <(curl -Ls https://coverage.codacy.com/get.sh) report -r coverage.xml
+      
