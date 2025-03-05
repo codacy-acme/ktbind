@@ -224,3 +224,6 @@ causes the function adapter template to be instantiated with parameter types `st
 Internally, field bindings utilize JNI accessor functions like `GetObjectField` and `SetObjectField` to extract and populate Java objects. Like with function bindinds, KtBind uses C++ type information to make the appropriate JNI function call. For instance, setting a field with type `double` entails a call to `GetDoubleField` (from Java to C++) or `SetDoubleField` (from C++ to Java). If the type is a composite type, such as a `std::vector<T>`, then a Java object is constructed recursively, and then set with `SetObjectField`. For example,
 * Setting a field of type `std::vector<int>` first creates a `java.util.ArrayList` with JNI's `NewObject`, then sets elements with the `add` method (invoked using JNI's `CallBooleanMethod`), performing boxing for the primitive type `int` with `valueOf`, and finally uses `SetObjectField` with the newly created `java.util.ArrayList` instance.
 * Setting an `std::vector<std::string>` field involves creating a `java.util.ArrayList` with JNI's `NewObject`, and a call to JNI's `NewStringUTF` for each string element. The strings are then added to the `java.util.ArrayList` instance with `add`, and finally to the field with `SetObjectField`.
+
+
+### test 1 2 3
