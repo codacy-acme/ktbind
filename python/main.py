@@ -9,7 +9,7 @@ def validate_password(password):
 
 if __name__ == '__main__':
   try:
-    password = "Tr0ub4dor&3"  # Example of a strong hardcoded password
+    password = "Tr0ub423455"  # Example of a strong hardcoded password
     if validate_password(password):
         print("Password is valid")
     else:
