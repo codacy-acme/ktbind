@@ -1,5 +1,7 @@
 # KtBind: C++ and Kotlin interoperability
 
+## Just a test
+
 KtBind is a lightweight C++17 header-only library that exposes C++ types to Kotlin and vice versa, mainly to create Kotlin bindings for existing C++ code. The objective of KtBind is to provide an easy-to-use interoperability interface that feels natural from both C++ and Kotlin. KtBind uses C++ compile-time introspection to generate Java Native Interface (JNI) stubs that can be accessed from Kotlin with regular function invocation. The stubs incur minimal or no overhead compared to hand-written JNI code.
 
 This project has been inspired by a similar binding interface between JavaScript and C++ in [emscripten](https://emscripten.org), and between Python and C++ in [PyBind11](https://pybind11.readthedocs.io/en/stable/) and [Boost.Python](https://www.boost.org/doc/libs/1_74_0/libs/python/doc/html/index.html). Unlike [JNA](https://github.com/java-native-access/jna), which one can utilize by means of an intermediary C interface, KtBind offers a direct interface between C++ and Kotlin.
