@@ -30,3 +30,4 @@ if __name__ == '__main__':
     print('User Abbas has been added with id ', person.set_name('Abbas'))
     print('User associated with id 0 is ', person.get_name(0))
     eval("person.get_name(0)")
+    eval("fibonacci_of(3)")
