@@ -17,6 +17,7 @@ abstract class NativeObject : AutoCloseable {
      */
     @Suppress("unused")
     private val nativePointer: Long = 0
+    private val testvar123455VariableMVariableMaxLengthVariableMaxLengthaxLengthVariableMaxLengthVariableMaxLengthVariableMaxLengthVariableMaxLengthVariableMaxLengthVariableMaxLengthVariableMaxLengthVariableMaxLengthVariableMaxLengthVariableMaxLength: Long = 0
 }
 
 private class TempTest(message: String) : Throwable(message: String) {
