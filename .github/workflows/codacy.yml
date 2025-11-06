@@ -3,10 +3,17 @@ name: Client Side Tools and Coverage
 
 on:
   push:
-    branches: [ '*' ]
+    branches:
+      - main
   pull_request:
     branches: [ '*' ]
-  workflow_dispatch:
+  paths:
+      - '*.json'
+      - '*.yaml'
+  merge_group:
+    types:
+      - checks_requested # this is the one that's isn't triggering Codacy analysis
+
 
 jobs:
   build:
