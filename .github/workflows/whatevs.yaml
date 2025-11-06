@@ -1,0 +1,16 @@
+name: Main CI/CD
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - '**'
+    paths:
+      - '*.json'
+      - '*.yaml'
+      # Trigger CI for repository-meta file so required sonarqube check still gets posted
+  merge_group:
+    types:
+      - checks_requested # this is the one that's isn't triggering Codacy analysis
