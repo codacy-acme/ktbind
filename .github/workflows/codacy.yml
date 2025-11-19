@@ -8,9 +8,6 @@ on:
   pull_request:
     branches: [ '*' ]
   merge_group:
-    types:
-      - checks_requested # this is the one that's isn't triggering Codacy analysis
-
 
 jobs:
   build:
