@@ -194,6 +194,7 @@ class LambdaSample private constructor() : NativeObject() {
     }
 }
 ```
+test
 and the way it is used:
 ```kotlin
 val result = LambdaSample.pass_callback_arguments("callback") { str, short, int, long -> "($str, $short, $int, $long)" }
