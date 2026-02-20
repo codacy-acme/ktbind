@@ -1,5 +1,6 @@
 class Person:
     name = []
+    temp = ''
 
     def set_name(self, user_name):
         self.name.append(user_name)
