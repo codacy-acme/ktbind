@@ -17,7 +17,7 @@ class Testing(unittest.TestCase):
         person.set_name('yay')
         self.assertEqual(person.get_name(0), 'yay')
 
-    def test_person(self):
+    def test_person2(self):
         person = Person()
         person.set_name('yay2')
         self.assertEqual(person.get_name(0), 'yay2')
