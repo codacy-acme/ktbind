@@ -17,5 +17,10 @@ class Testing(unittest.TestCase):
         person.set_name('yay')
         self.assertEqual(person.get_name(0), 'yay')
 
+    def test_person2(self):
+        person = Person()
+        person.set_name('yay2')
+        self.assertEqual(person.get_name(0), 'yay2')
+
 if __name__ == '__main__':
     unittest.main()
