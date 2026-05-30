@@ -7,13 +7,7 @@ on:
       - master
   pull_request:
     branches: [ '*' ]
-    paths:
-        - '*.json'
-        - '*.yaml'
   merge_group:
-    types:
-      - checks_requested # this is the one that's isn't triggering Codacy analysis
-
 
 jobs:
   build:
