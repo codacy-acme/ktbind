@@ -1,3 +1,5 @@
 flask==1.0.2
-django==1.11.29
+django==4.2.26
 requests==2.19.1
+PyYAML==6.0.2
+Pillow==12.2.0
